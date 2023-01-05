@@ -1,0 +1,64 @@
+@use "../../scss/settings" as *;
+
+.repos-button {
+  @include flex(row, center, center);
+  cursor: pointer;
+  user-select: none;
+  width: max-content;
+  background-color: transparent;
+  border: 0;
+
+  &__label {
+    font-family: Alata;
+    font-size: 18px;
+    margin: 0px;
+  }
+
+  &--solid {
+    @include size(100%, 48px);
+    background-color: $blue-depths;
+    transition: 0.25s;
+    .repos-button__label {
+      color: white;
+    }
+    svg {
+      fill: white;
+    }
+    &:hover {
+      background-color: $glitter;
+      .repos-button__label {
+        color: $blue-depths;
+      }
+    }
+  }
+
+  &--transparent-duke {
+    background-color: transparent;
+
+    svg {
+      fill: $duke-blue;
+    }
+    .is-button__label {
+      color: $blue-depths;
+      font-size: 18px;
+    }
+    &:hover {
+      svg {
+        fill: $duke-blue;
+      }
+      .is-button__label {
+        color: $duke-blue;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-icon--left {
+    @include gap(10px, row);
+  }
+
+  &-icon--right {
+    @include gap(10px, row-reverse);
+    flex-direction: row-reverse;
+  }
+}
