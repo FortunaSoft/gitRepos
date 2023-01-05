@@ -1,0 +1,48 @@
+@use "../../scss/settings" as *;
+
+.repo-preview {
+  @include size(100%);
+  @include flex(row, center, center);
+  @include gap(20px);
+  background-color: #f6f6f9;
+
+  &-card {
+    height: 350px;
+    background-color: white;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.349);
+    padding: 15px 20px;
+    border-radius: 5px !important;
+  }
+
+  &__main {
+    @include flex(column, space-between, flex-start);
+    @include gap(0px);
+    border: none;
+    border-radius: 0px;
+    width: 500px;
+    cursor: default;
+
+    .repo-element {
+      &__left {
+        @include flex(column, flex-start, flex-start);
+        .repo-description__label {
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 15;
+          -webkit-box-orient: vertical;
+        }
+      }
+
+      &__right {
+        @include flex(row, flex-start, center);
+        @include size(100%, max-content);
+        // @include size(20px);
+      }
+    }
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}
