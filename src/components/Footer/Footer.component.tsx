@@ -30,6 +30,7 @@ const Footer: React.FC<FooterProps> = (props) => {
               setCurrentPage(currentPage - 1);
             }
           }}
+          styleType="transparent-duke"
           icon={<ArrowLeft />}
           className="footer__button"
         />
@@ -41,6 +42,7 @@ const Footer: React.FC<FooterProps> = (props) => {
           onClick={() => {
             setCurrentPage(currentPage + 1);
           }}
+          styleType="transparent-duke"
           className="footer__button"
         />
       </div>
