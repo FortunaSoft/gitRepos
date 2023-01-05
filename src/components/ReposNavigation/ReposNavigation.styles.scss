@@ -1,0 +1,25 @@
+@use "../../scss/settings" as *;
+
+.repos-navigation {
+  @include flex(row, space-between, center);
+  @include size(100%, 50px);
+
+  &__topics {
+    @include flex(row, space-between, center);
+    @include size(max-content, 100%);
+    @include gap(20px);
+    margin-left: 20px;
+    .repos-button {
+      @include size(100px, 30px);
+    }
+  }
+  &__sorting {
+    @include flex(row, space-between, center);
+    @include size(max-content, 100%);
+    @include gap(20px);
+    margin-right: 20px;
+    .repos-button {
+      @include size(150px, 30px);
+    }
+  }
+}

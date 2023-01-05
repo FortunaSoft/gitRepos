@@ -1,0 +1,117 @@
+@use "../../scss/settings" as *;
+
+.repo-element {
+  @include flex(row, space-between, center);
+  @include size(100%, min-content);
+  @include gap(50px);
+
+  font-family: Alata;
+  padding: 10px 20px;
+  background-color: $ghost-white;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.055);
+
+  cursor: pointer;
+  &:hover {
+    background-color: $glitter;
+  }
+
+  &__left {
+    @include gap(5px, column);
+
+    &__top {
+      @include size(min-content, 100%);
+      @include flex(row, space-between, center);
+      @include gap(15px);
+
+      .repo-name {
+        @include size(max-content, 100%);
+        &__label {
+          font-size: 18px;
+          font-weight: 500;
+          color: rgb(65, 65, 65);
+        }
+      }
+
+      .repo-privacy {
+        background-color: $glitter;
+        height: 23px;
+        padding: 0px 10px;
+        border-radius: 5px;
+        .info-block__label {
+          line-height: 22px;
+          font-size: 12px;
+          letter-spacing: 1px;
+        }
+
+        &--private {
+          background-color: $unicorn-silver;
+          .info-block__label {
+            color: $aged-moustache-grey;
+          }
+          svg {
+            fill: $aged-moustache-grey;
+          }
+        }
+      }
+      .profile-icon {
+        @include size(25px);
+        border: 2px solid white;
+        outline: 2px solid rgba(0, 0, 0, 0.267);
+
+        border-radius: 100%;
+      }
+    }
+
+    &__bottom {
+      .repo-description {
+        &__label {
+          font-size: 15px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1; /* number of lines to show */
+          line-clamp: 1;
+          -webkit-box-orient: vertical;
+          color: #a2a2a2;
+        }
+      }
+    }
+  }
+
+  &__right {
+    @include size(max-content, 100%);
+    @include flex(row, space-between, center);
+    @include gap(20px);
+
+    &__info-holder {
+      @include flex(row, center, center);
+      @include gap(25px);
+      padding: 3px 10px;
+      border-radius: 3px;
+    }
+  }
+}
+
+.info-block {
+  @include flex(row, space-between, center);
+  @include size(min-content, 25px);
+  @include gap(5px);
+
+  font-family: Arimo;
+  font-weight: 500;
+  line-height: 25px;
+
+  .repos-icon {
+    @include size(20px);
+  }
+  svg {
+    fill: #21325e;
+    color: red;
+  }
+  &__label {
+    width: max-content;
+    color: #21325e;
+    font-size: 15px;
+    font-weight: 800;
+  }
+}

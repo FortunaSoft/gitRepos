@@ -1,0 +1,6 @@
+@use "../../scss/settings" as *;
+
+.repos-page {
+  @include flex(column, space-between, center);
+  @include size(100%, 100%);
+}

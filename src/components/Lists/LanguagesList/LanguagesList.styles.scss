@@ -1,0 +1,22 @@
+@use "../../../scss/settings" as *;
+
+.languages__list {
+  width: 100px;
+}
+
+.language-element {
+  @include flex(row, flex-start, center);
+  @include gap(10px);
+
+  p {
+    font-family: Alata;
+    font-size: 15px;
+    height: max-content;
+  }
+
+  &__dot {
+    @include size(6px);
+    border-radius: 100%;
+    background-color: gray;
+  }
+}

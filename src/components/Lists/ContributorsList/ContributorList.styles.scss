@@ -1,0 +1,17 @@
+@use "../../../scss/settings" as *;
+
+.contrubitor-element {
+  @include size(100%, 30px);
+  @include flex(row, flex-start, center);
+  @include gap(10px);
+
+  img {
+    @include size(20px);
+    border-radius: 100%;
+  }
+  p {
+    font-family: Alata;
+    font-size: 15px;
+    height: max-content;
+  }
+}

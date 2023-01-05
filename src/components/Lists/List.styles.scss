@@ -1,0 +1,19 @@
+@use "../../scss/settings" as *;
+
+.list {
+  width: max-content;
+
+  &__header {
+    @include flex(row, center, center);
+    margin-bottom: 10px;
+
+    p {
+      font-family: Alata;
+      color: gray;
+    }
+  }
+
+  &__main {
+    @include size(max-content, 100%);
+  }
+}
