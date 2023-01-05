@@ -11,5 +11,6 @@ Dependencies
 
 Installing
 ````
+clone https://github.com/FortunaSoft/gitRepos.git
 npm install
 ````
