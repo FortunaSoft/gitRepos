@@ -6,6 +6,7 @@ import Button from "../../components/Button";
 import RepoList from "../../components/ReposList";
 import { SearchOptions } from "../../types/services";
 import Footer from "../../components/Footer";
+
 import "./ReposPage.styles.scss";
 
 type ReposPageProps = {
@@ -14,7 +15,7 @@ type ReposPageProps = {
 
 const ReposPage: React.FC<ReposPageProps> = (props) => {
   const { className } = props;
-  const topics = ["react", "angular", "vue"];
+  const topics = ["React", "Angular", "Vue"];
   const [options, setOptions] = useState<SearchOptions>({
     order: "desc",
     sort: "stars",

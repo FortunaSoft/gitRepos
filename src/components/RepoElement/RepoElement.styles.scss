@@ -104,10 +104,7 @@
   .repos-icon {
     @include size(20px);
   }
-  svg {
-    fill: #21325e;
-    color: red;
-  }
+
   &__label {
     width: max-content;
     color: #21325e;
