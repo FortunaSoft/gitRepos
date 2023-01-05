@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Router, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import ReposPage from "./pages/ReposPage";
 import RepoPreview from "./pages/RepoPreview";
 

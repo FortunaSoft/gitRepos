@@ -1,8 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 
 import ReposNavigation from "../../components/ReposNavigation";
-import Button from "../../components/Button";
 import RepoList from "../../components/ReposList";
 import { SearchOptions } from "../../types/services";
 import Footer from "../../components/Footer";
@@ -23,8 +22,6 @@ const ReposPage: React.FC<ReposPageProps> = (props) => {
     search: "react",
   });
 
-  const footerRef = useRef();
-  const [selectedTopic, setSelectedTopic] = useState(0);
   const classes = classNames("repos-page", className);
 
   return (
