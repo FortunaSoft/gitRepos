@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export const searchRepos = async (
   q,
   sort = "stars",
